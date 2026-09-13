@@ -207,7 +207,7 @@ require("conform").setup({
 			return nil
 		else
 			return {
-				timeout_ms = 500,
+				timeout_ms = 1000,
 				lsp_format = "fallback",
 			}
 		end
@@ -216,6 +216,7 @@ require("conform").setup({
 	formatters_by_ft = {
 		c = { "clang-format" },
 		cpp = { "clang-format" },
+		cs = { "csharpier" },
 		lua = { "stylua" },
 		rust = { "rustfmt" },
 	},
