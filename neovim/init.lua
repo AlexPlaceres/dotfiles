@@ -192,6 +192,7 @@ vim.pack.add({
 	"https://codeberg.org/andyg/leap.nvim",
 	"https://github.com/rktjmp/lush.nvim",
 	"https://github.com/zenbones-theme/zenbones.nvim",
+	"https://github.com/seblyng/roslyn.nvim",
 })
 
 vim.keymap.set({ "n", "x", "o" }, "s", "<Plug>(leap)")
@@ -457,11 +458,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
+require("roslyn").setup()
+
 ---@type table<string, vim.lsp.Config>
 local servers = {
 	clangd = {},
 	ruff = {},
 	rust_analyzer = {},
+	roslyn = {},
 }
 
 for name, server in pairs(servers) do
