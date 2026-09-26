@@ -465,6 +465,7 @@ require("roslyn").setup()
 local servers = {
 	clangd = {},
 	ruff = {},
+	ty = {},
 	rust_analyzer = {},
 	roslyn = {},
 }
